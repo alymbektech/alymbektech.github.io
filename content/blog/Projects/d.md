@@ -3,7 +3,7 @@ title: 'Online Price Tracking Tool for Nordstrom Rack'
 date: 2020-08-18 10:00:13
 category: 'Projects'
 thumbnail: './images/hello.png'
-draft: false
+draft: true
 ---
 
 ![](./images/hello.png)
@@ -73,7 +73,7 @@ _code_
 
 **bold** _italic_
 
-## 4. Support emoji :rocket:
+## 4. Support emoji :rocket
 
 Based on [emojione](https://github.com/emojione/emojione) :pray:
 
