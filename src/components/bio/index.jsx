@@ -1,6 +1,9 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
+import { GitHubIcon } from '../social-share/github-icon'
+import { LinkedInIcon } from '../social-share/linkedin-icon'
+import { InstagramIcon } from '../social-share/instagram-icon'
 
 import './index.scss'
 
@@ -8,8 +11,7 @@ export const Bio = () => (
   <StaticQuery
     query={bioQuery}
     render={data => {
-      const { author, social, introduction } = data.site.siteMetadata
-
+      const { author, social, introduction, hiring } = data.site.siteMetadata
       return (
         <div className="bio">
           <div className="author">
@@ -23,31 +25,35 @@ export const Bio = () => (
                 }}
               />
               <div className="author-name">
-                <span className="author-name-prefix">Written by</span>
+                <span className="author-name-prefix">Here is my</span>
                 <Link to={'/about'} className="author-name-content">
-                  <span>@{author}</span>
+                  <span>resume</span>
                 </Link>
                 <div className="author-introduction">{introduction}</div>
+                <div className="author-introduction">{hiring}</div>
+                <GitHubIcon/>
+                <LinkedInIcon/>
+                <InstagramIcon/>
+
                 <p className="author-socials">
                   {social.github && (
-                    <a href={`https://github.com/${social.github}`}>GitHub</a>
-                  )}
-                  {social.medium && (
-                    <a href={`https://medium.com/${social.medium}`}>Medium</a>
-                  )}
-                  {social.twitter && (
-                    <a href={`https://twitter.com/${social.twitter}`}>
-                      Twitter
-                    </a>
-                  )}
-                  {social.facebook && (
-                    <a href={`https://www.facebook.com/${social.facebook}`}>
-                      Facebook
-                    </a>
+                    <a href={`https://github.com/${social.github}`}>
+                      GitHub
+                      </a>
                   )}
                   {social.linkedin && (
                     <a href={`https://www.linkedin.com/in/${social.linkedin}/`}>
                       LinkedIn
+                    </a>
+                  )}
+                  {social.instagram && (
+                    <a href={`https://instagram.com/${social.instagram}`}>
+                      Instagram
+                      </a>
+                  )}                
+                  {social.facebook && (
+                    <a href={`https://www.facebook.com/${social.facebook}`}>
+                      Facebook
                     </a>
                   )}
                 </p>
@@ -73,6 +79,7 @@ const bioQuery = graphql`
       siteMetadata {
         author
         introduction
+        hiring
         social {
           twitter
           github

@@ -3,11 +3,13 @@ module.exports = {
   description: `ADU Web portfolio`,
   author: `alymbek`,
   introduction: `Computer Science @ MU '20`,
-  siteUrl: `https://gatsby-starter-bee.netlify.com`, // Your blog site url
+  hiring: `I'm currently exploring new opportunities - if your company is hiring then I'd love to know!`,
+  siteUrl: `https://alymbektech.github.io/`, // Your blog site url
   social: {
+    instagram: `come one`, // Your Instagram account
     twitter: ``, // Your Twitter account
-    github: ``, // Your GitHub account
     medium: ``, // Your Medium account
+    github: ``, // Your GitHub account
     facebook: ``, // Your Facebook account
     linkedin: ``, // Your LinkedIn account
   },
